@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Necromancer V37 - Expanded Battlefield</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <div id="ui">
+      💀 <span id="souls">0</span> | ❤️ <span id="hp">150</span> | WAVE
+      <span id="wave">1</span> | ARMY <span id="army">0</span> | ⛪
+      <span id="deaconInfo">20 HP/s | 10% Convert</span>
+    </div>
+
+    <div id="bossName"></div>
+    <div id="bossBar"><div id="bossFill"></div></div>
+
+    <div id="topControls">
+      <button id="pauseBtn" type="button" onclick="pauseGame()">Ⅱ PAUSE</button>
+    </div>
+
+    <div id="gameWrap">
+      <canvas id="game" width="1600" height="1100"></canvas>
+    </div>
+
+    <div id="btnBar">
+      <button class="deacons" type="button" onclick="raise('deacons')">
+        ⛪ DEACONS (5)
+      </button>
+      <button class="ludwig" type="button" onclick="raise('ludwig')">
+        ⚔️ LUDWIG (10)
+      </button>
+      <button class="gael" type="button" onclick="raise('gael')">
+        💀 GAEL (15)
+      </button>
+      <button class="rennala" type="button" onclick="raise('rennala')">
+        🌙 RENNALA (22)
+      </button>
+      <button class="cinder" type="button" onclick="raise('cinder')">
+        ⚡ CINDER (20)
+      </button>
+      <button class="midir" type="button" onclick="raise('midir')">
+        🐉 MIDIR (28)
+      </button>
+      <button class="nagato" type="button" onclick="raise('nagato')">
+        👁️ NAGATO (30)
+      </button>
+      <button class="snd" id="sndBtn" type="button" onclick="toggleSound()">
+        🔊 SFX
+      </button>
+      <button class="fs" type="button" onclick="toggleFS()">⛶ FULL</button>
+    </div>
+
+    <div id="hint">
+      WASD / ARROWS: Move · CLICK: Soul Bolt · 1–7: Summon · F: Fullscreen ·
+      ESC: Pause
+    </div>
+
+    <div id="menuOverlay">
+      <div id="menuPanel">
+        <h1>☠ NECROMANCER</h1>
+        <p id="menuText">
+          The battlefield has expanded. Raise your army, survive the waves, and
+          hunt the bosses.
+        </p>
+        <button
+          class="menuBtn"
+          id="startBtn"
+          type="button"
+          onclick="startGame()"
+        >
+          ▶ START GAME
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

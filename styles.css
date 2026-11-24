@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, #1b1b35, #080810 70%);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+#gameWrap {
+  width: 100vw;
+  height: calc(100vh - 170px);
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+canvas {
+  background: #161625;
+  display: block;
+  border: 3px solid #f59e0b;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  image-rendering: pixelated;
+  box-shadow: 0 0 28px #000a;
+}
+#ui {
+  padding: 9px 6px;
+  font-weight: bold;
+  font-size: 13px;
+  background: linear-gradient(90deg, #171326, #242038, #171326);
+  border-bottom: 1px solid #8b5cf6;
+  letter-spacing: 0.4px;
+}
+#bossName {
+  display: none;
+  color: #fde047;
+  font-weight: bold;
+}
+#bossBar {
+  height: 18px;
+  background: #333;
+  margin: 5px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+}
+#bossFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ef4444, #f59e0b);
+  width: 100%;
+}
+#btnBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 2px;
+  min-height: 52px;
+}
+button {
+  padding: 8px 10px;
+  background: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 11px;
+  margin: 2px;
+  cursor: pointer;
+}
+.deacons {
+  background: #f59e0b;
+  color: #000;
+  font-weight: bold;
+}
+.ludwig {
+  background: #eab308;
+  color: #000;
+  font-weight: bold;
+}
+.gael {
+  background: #dc2626;
+  font-weight: bold;
+}
+.cinder {
+  background: #f97316;
+  color: #000;
+  font-weight: bold;
+}
+.rennala {
+  background: #93c5fd;
+  color: #000;
+  font-weight: bold;
+}
+.nagato {
+  background: #dc2626;
+  color: #fff;
+  font-weight: bold;
+}
+.midir {
+  background: #6d28d9;
+  color: #fff;
+  font-weight: bold;
+}
+.fs {
+  background: #f59e0b;
+  color: #000;
+}
+.snd {
+  background: #10b981;
+  color: #000;
+  font-weight: bold;
+}
+#hint {
+  font-size: 11px;
+  opacity: 0.75;
+  margin: 3px;
+}
+#btnBar {
+  background: #100d1c;
+  border-top: 1px solid #45345e;
+  transition: opacity 0.2s;
+}
+#btnBar.encounter-hidden {
+  display: none;
+}
+#menuOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #302044ee, #080711f5);
+  backdrop-filter: blur(5px);
+}
+#menuPanel {
+  width: min(480px, 90vw);
+  padding: 30px 24px;
+  background: linear-gradient(145deg, #21172f, #100d1b);
+  border: 2px solid #a855f7;
+  border-radius: 18px;
+  box-shadow: 0 0 45px #7e22ce66;
+  text-align: center;
+}
+#menuPanel h1 {
+  font-size: clamp(28px, 6vw, 48px);
+  margin: 0 0 8px;
+  color: #f5d0fe;
+  text-shadow: 0 0 18px #a855f7;
+}
+#menuPanel p {
+  color: #d6c9e8;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.menuBtn {
+  font-size: 15px;
+  padding: 12px 24px;
+  margin: 8px;
+  background: linear-gradient(90deg, #7e22ce, #4c1d95);
+  border: 1px solid #c084fc;
+  min-width: 145px;
+}
+#pauseBtn {
+  background: #312044;
+  border: 1px solid #a78bfa;
+  font-weight: bold;
+}
+#topControls {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  z-index: 5;
+}
